@@ -6,34 +6,18 @@
       <th>Car Name</th>
       <th>Model</th>
       <th>Year</th>
-      <th>Option</th>
+      <th>Do you own?</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>Range Rover</td>
-      <td>SUV</td>
-      <td>2018</td>
-      <td>Land Rover</td>
-    </tr>
-    <tr>
-      <td>Range Rover</td>
-      <td>SUV</td>
-      <td>2018</td>
-      <td>Land Rover</td>
-    </tr>
-    <tr>
-      <td>Range Rover</td>
-      <td>SUV</td>
-      <td>2018</td>
-      <td>Land Rover</td>
-    </tr>
-    <tr>
-      <td>Range Rover</td>
-      <td>SUV</td>
-      <td>2018</td>
-      <td>Land Rover</td>
-    </tr>
-  </tbody>
+  <% @users_cars.each do |car| %>
+    <tbody>
+      <tr>
+        <td><%= link_to car.name, car_path(car) %></td>
+        <td><%= car.model.upcase %></td>
+        <td><%= car.year %></td>
+        <td><strong><%= status(car) %></strong></td>
+      </tr>
+    </tbody>
+  <% end %>
 </table>
 

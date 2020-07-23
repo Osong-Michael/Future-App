@@ -1,0 +1,14 @@
+<h1 class="app-headers"> <%= image_tag(@car.brand.image.url, class: 'brand-pic') %></h1>
+
+
+<div class="car-container">
+  <div class="car-card">
+    <div class="car-img">
+      <%= image_tag(@car.image.url) %>
+    </div>
+    <div class="car-details">
+      <h2><span><%= @car.year %> </span><%= @car.name %></h2>
+      <p><strong>Model:</strong> <%= @car.model %></p>
+    </div>
+  </div>
+</div>

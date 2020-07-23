@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'users#homepage'
   resources :users
   resources :brands
+  resources :cars
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'

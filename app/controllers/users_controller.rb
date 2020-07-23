@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def show 
     @user = User.find(params[:id])
+    @users_cars = @user.cars
   end
 
   def edit

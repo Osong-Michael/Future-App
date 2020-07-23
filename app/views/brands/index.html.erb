@@ -1,0 +1,6 @@
+<h1>All brands
+</h1>
+
+<% @brands.each do |brand| %>
+  <p><%= image_tag(brand.image.url, class: 'brand-pic') %></p>
+<% end %>

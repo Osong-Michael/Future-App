@@ -1,6 +1,11 @@
 class BrandsController < ApplicationController
   before_action :require_user
   
+  def index 
+    @brands = Brand.all
+  end
+
+
   def new
     @brand = Brand.new
   end
