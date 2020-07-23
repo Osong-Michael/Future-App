@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: oa7
+  api_key: '385643921322356'
+  api_secret: SNCLuCSFzvcSlcIDJaMm1Txkmxk
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: oa7
+  api_key: '385643921322356'
+  api_secret: SNCLuCSFzvcSlcIDJaMm1Txkmxk
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: oa7
+  api_key: '385643921322356'
+  api_secret: SNCLuCSFzvcSlcIDJaMm1Txkmxk
+  enhance_image_tag: true
+  static_file_support: false

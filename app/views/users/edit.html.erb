@@ -4,6 +4,10 @@
     <%= f.label :username %>
     <%= f.text_field :username, placeholder: 'Enter your username..', autofocus: true, class:'input-box' %>
 
+    <%= f.label :image %>
+    <%= f.file_field :image, class:'input-box' %>
+    <%= f.hidden_field :image_cache %>
+
     <%= f.submit 'Update', class: 'sign-up-btn' %>
     
   <% end %>

@@ -1,1 +1,39 @@
-<h1 class="app-headers">Welcome <%= @user.username %></h1>
+<h1 class="app-headers"><%= @user.username %> <%= image_tag(@user.image.thumb.url) %> </h1>
+
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Car Name</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Range Rover</td>
+      <td>SUV</td>
+      <td>2018</td>
+      <td>Land Rover</td>
+    </tr>
+    <tr>
+      <td>Range Rover</td>
+      <td>SUV</td>
+      <td>2018</td>
+      <td>Land Rover</td>
+    </tr>
+    <tr>
+      <td>Range Rover</td>
+      <td>SUV</td>
+      <td>2018</td>
+      <td>Land Rover</td>
+    </tr>
+    <tr>
+      <td>Range Rover</td>
+      <td>SUV</td>
+      <td>2018</td>
+      <td>Land Rover</td>
+    </tr>
+  </tbody>
+</table>
+
