@@ -1,2 +1,4 @@
 
-<h1 class="app-headers">Welcome User</h1>
+<h1 class="app-headers">Welcome <%= current_user.username %></h1>
+
+<%= link_to 'Sign Out', logout_path, method: :delete %>
