@@ -29,13 +29,15 @@ nav ul li{
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul .nav-links{
+nav ul .nav-links, .nav-links2 {
   color: white;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
+
+
 .nav-links.active,.nav-links:hover{
   background: #1b9bff;
   transition: .5s;
