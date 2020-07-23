@@ -1,0 +1,14 @@
+<h1 class="app-headers"></h1>
+
+<div class="sign-up-form">
+  <h1>Sign Up</h1>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: 'Enter your username..', autofocus: true, class:'input-box' %>
+
+    <%= f.submit 'Sign Up', class: 'sign-up-btn' %>
+    <hr>
+    <p class="or">OR</p>
+    <%= link_to 'Login', '', class: 'log-in-btn' %>
+  <% end %>
+</div>
