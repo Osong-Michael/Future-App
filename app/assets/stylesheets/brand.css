@@ -71,3 +71,19 @@
 .card__link:hover {
   text-decoration: underline;
 }
+
+.brand-grid {
+  border: 1px solid yellow;
+  width: 70%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 100px 100px;
+}
+
+.grid {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

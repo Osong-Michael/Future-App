@@ -1,4 +1,4 @@
-<h1 class="app-headers">Edit your Car Details</h1>
+<h1 class="app-headers">Add new Car to Collection</h1>
 
 <div class="sign-up-form">
   <%= form_for @car do |f| %>
@@ -14,7 +14,11 @@
     <%= f.label :image %>
     <%= f.file_field :image, class:'input-box' %>
 
-    <%= f.submit 'Edit Car', class: 'sign-up-btn' %>
+    <%= f.label :brand %>
+    <%= f.collection_select(:brand_id,  Brand.all, :id, :brand_name, { :prompt => 'Select a Brand for your car' }, { class:'input-box'} ) %>
+    
+
+    <%= f.submit 'Add Car', class: 'sign-up-btn' %>
     
   <% end %>
 </div>

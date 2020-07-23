@@ -1,6 +1,11 @@
-<h1>All brands
-</h1>
+<h1 class="app-headers">All Brands</h1>
 
-<% @brands.each do |brand| %>
-  <p><%= image_tag(brand.image.url, class: 'brand-pic') %></p>
-<% end %>
+
+
+<div class="brand-grid">
+  <% @brands.each do |brand| %>
+    <div class="grid">
+      <p><%= image_tag(brand.image.url, class: 'brand-pic') %></p>
+    </div>
+  <% end %>
+</div>

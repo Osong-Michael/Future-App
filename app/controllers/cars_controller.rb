@@ -6,8 +6,8 @@ class CarsController < ApplicationController
   end
   
   def create
-    @brand = Brand.find(params[:id]) 
-    @car = current_user.new(car_params)
+    @brand = Brand.find(params[:car][:brand_id]) 
+    @car = current_user.cars.new(car_params)
     @car.brand_id = @brand.id 
     if @car.save 
       flash[:notice] = 'You have successfully added a new car to your collection'
@@ -38,7 +38,7 @@ class CarsController < ApplicationController
   private 
 
   def car_params
-    params.require(:car).permit(:name, :image, :year, :model, :bought, :image_cache)
+    params.require(:car).permit(:name, :image, :year, :model, :bought, :brand_id, :user_id)
   end
   
 

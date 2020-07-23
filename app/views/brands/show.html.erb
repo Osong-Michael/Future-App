@@ -2,6 +2,10 @@
   <%= image_tag(@brand.image.url, class: 'brand-pic' ) %>
 </h1>
 
+ <div class="add-car">
+    <%= link_to 'Add New Car to Collection', new_car_path %>
+  </div>
+
 <div class="cards">
   <div class="card">
     <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
