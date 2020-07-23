@@ -5,7 +5,7 @@
 <div class="brand-grid">
   <% @brands.each do |brand| %>
     <div class="grid">
-      <p><%= image_tag(brand.image.url, class: 'brand-pic') %></p>
+      <p><%= link_to image_tag(brand.image.url, class: 'brand-pic'), brand_path(brand) %></p>
     </div>
   <% end %>
 </div>

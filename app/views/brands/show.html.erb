@@ -2,85 +2,24 @@
   <%= image_tag(@brand.image.url, class: 'brand-pic' ) %>
 </h1>
 
- <div class="add-car">
-    <%= link_to 'Add New Car to Collection', new_car_path %>
-  </div>
-
+ 
 <div class="cards">
-  <div class="card">
-    <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
-    <div class="card__content">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
-      </p>
-      <p>
-        Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
-      </p>
-    </div>
-    <div class="card__info">
-      <div>
-        <i class="material-icons">thumb_up</i>310
+  <% @brand_cars.each do |car| %>
+    <div class="card">
+      <%= link_to image_tag(car.image.url, class: 'card__image'), car_path(car) %>
+      <div class="card__content">
+        <p>
+          <strong><span><%= car.year %></span> <%= car.name %></strong>
+        </p>
+        <p>
+          <%= car.model %>
+        </p>
       </div>
-      <div>
-        <a href="./" class="card__link">View Article</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card__image" src="https://fakeimg.pl/400x300/252c6a/fff/" alt="">
-    <div class="card__content">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
-      </p>
-      <p>
-        Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
-      </p>
-    </div>
-    <div class="card__info">
-      <div>
-        <i class="material-icons">thumb_up</i>1,993
-      </div>
-      <div>
-        <a href="./" class="card__link">View Article</a>
+      <div class="card__info">
+        <div>
+          <i class="material-icons">thumb_up</i>310
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <img class="card__image" src="https://fakeimg.pl/400x300/f1db26/000/" alt="">
-    <div class="card__content">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
-      </p>
-      <p>
-        Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
-      </p>
-    </div>
-    <div class="card__info">
-      <div>
-        <i class="material-icons">thumb_up</i>887
-      </div>
-      <div>
-        <a href="./" class="card__link">View Article</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card__image" src="https://fakeimg.pl/400x300/f1db26/000/" alt="">
-    <div class="card__content">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
-      </p>
-      <p>
-        Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
-      </p>
-    </div>
-    <div class="card__info">
-      <div>
-        <i class="material-icons">thumb_up</i>887
-      </div>
-      <div>
-        <a href="./" class="card__link">View Article</a>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>

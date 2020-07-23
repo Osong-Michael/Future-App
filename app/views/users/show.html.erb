@@ -1,4 +1,15 @@
-<h1 class="app-headers"><%= @user.username %> <%= image_tag(@user.image.thumb.url) %> </h1>
+<div class="user-btn">
+  <div class="add-brand">
+    <%= link_to 'Add New Brand', new_brand_path %>
+  </div>
+  <div class="add-brand">
+    <%= link_to 'Add New Car to Collection', new_car_path %>
+  </div>
+</div>
+
+<h1 class="app-headers">
+  <%= @user.username %> <%= image_tag(@user.image.thumb.url) %> 
+</h1>
 
 <table class="content-table">
   <thead>
@@ -20,10 +31,4 @@
     </tbody>
   <% end %>
 </table>
-
-<div class="user-btn">
-  <div class="add-brand">
-    <%= link_to 'Add New Brand', new_brand_path %>
-  </div>
-</div>
 

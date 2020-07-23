@@ -6,7 +6,7 @@ class CarsController < ApplicationController
   end
   
   def create
-    @brand = Brand.find(params[:car][:brand_id]) 
+    @brand = Brand.find(params[:car][:brand_id])
     @car = current_user.cars.new(car_params)
     @car.brand_id = @brand.id 
     if @car.save 

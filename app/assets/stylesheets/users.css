@@ -87,3 +87,24 @@ hr {
   font-weight: bold;
   color: #1c8adb;
 }
+
+.user-btn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.add-brand {
+  border: 1px solid  #1c8adb;
+  padding: 10px;
+  background-color: #1c8adb;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.add-brand a {
+  color: #fff;
+}
