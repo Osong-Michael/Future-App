@@ -73,7 +73,6 @@
 }
 
 .brand-grid {
-  border: 1px solid yellow;
   width: 70%;
   margin: 50px auto;
   display: grid;
@@ -82,7 +81,6 @@
 }
 
 .grid {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;

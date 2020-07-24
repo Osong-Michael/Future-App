@@ -6,12 +6,9 @@ class CarsController < ApplicationController
   end
   
   def create
-    @brand = Brand.find(params[:car][:brand_id])
-    @car = current_user.cars.new(car_params)
-    @car.brand_id = @brand.id 
     if @car.save 
       flash[:notice] = 'You have successfully added a new car to your collection'
-      redirect_to @brand 
+      redirect_to user_path(current_user) 
     else 
       flash.now[:notice] = 'Something went wrong'
       render :new 
