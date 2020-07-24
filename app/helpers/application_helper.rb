@@ -2,7 +2,9 @@ module ApplicationHelper
 
   def status(car) 
     if car.bought == false
-      'You need to grind harder'
+      'Grind harder'
+    else
+      'Great Job Achieving this Dream'
     end
   end
 end

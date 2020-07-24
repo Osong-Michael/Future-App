@@ -13,7 +13,7 @@
 }
 
 .sign-up-form h1 {
-  color: #1c8adb;
+  color: var(--main-color);
   margin-bottom: 30px;
 }
 
@@ -41,7 +41,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #1c8adb;
+  background-color: var(--main-color);
 }
 
 hr {
@@ -60,7 +60,7 @@ hr {
 }
 
 .content-table thead tr {
-  background-color: #1c8adb;
+  background-color: var(--main-color);
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -80,7 +80,7 @@ hr {
 }
 
 .content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #1c8adb9;
+  border-bottom: 2px solid var(--main-color);
 }
 
 .content-table tbody tr.active-row {
@@ -93,18 +93,26 @@ hr {
   flex-direction: column;
   width: 20%;
   padding: 15px;
-  justify-content: space-between;
 }
 
 .add-brand {
-  border: 1px solid  #1c8adb;
   padding: 10px;
-  background-color: #1c8adb;
-  border-radius: 5px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .add-brand a {
   color: #fff;
+  padding: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.user-name {
+  color: #fff;
+
+}
+
+.profile-pic {
+  border-radius: 50%;
 }

@@ -30,12 +30,18 @@ class CarsController < ApplicationController
     redirect_to @car
   end
   
+
+  def owns 
+    @car = Car.find_by(id: params[:car_id])
+    @car.update(bought: true)
+    redirect_to user_path(current_user) 
+  end
   
 
   private 
 
   def car_params
-    params.require(:car).permit(:name, :image, :year, :model, :bought, :brand_id, :user_id)
+    params.require(:car).permit(:name, :image, :year, :model, :bought, :brand_id, :user_id, :car_id)
   end
   
 

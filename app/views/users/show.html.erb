@@ -8,7 +8,7 @@
 </div>
 
 <h1 class="app-headers">
-  <%= @user.username %> <%= image_tag(@user.image.thumb.url) %> 
+  <%= @user.username %>
 </h1>
 
 <table class="content-table">
@@ -17,7 +17,7 @@
       <th>Car Name</th>
       <th>Model</th>
       <th>Year</th>
-      <th>Do you own?</th>
+      <th>Status</th>
     </tr>
   </thead>
   <% @users_cars.each do |car| %>

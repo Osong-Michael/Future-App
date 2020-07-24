@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def homepage
     
   end
@@ -11,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save 
+      session[:user_id] = @user.id 
       flash[:success] = 'You account has been successfully created'
       redirect_to @user 
     else
@@ -21,7 +21,15 @@ class UsersController < ApplicationController
 
   def show 
     @user = User.find(params[:id])
-    @users_cars = @user.cars
+    case params[:filter]
+    when 'owned'
+      @users_cars = @user.cars.owned_cars
+    when 'fly'
+      @users_cars = @user.cars.work_harder
+    else
+      @users_cars= @user.cars
+    end
+    
   end
 
   def edit

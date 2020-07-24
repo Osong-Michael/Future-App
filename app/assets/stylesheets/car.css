@@ -24,3 +24,30 @@
   justify-content: center;
   align-items: center;
 }
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.edt-car-link {
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.edt-car-link a {
+  padding: 5px;
+  border-radius: 4px;
+  color: antiquewhite;
+  background-color: var(--main-color);
+}
+
+.own-it {
+  padding: 4px;
+  background-color: var(--sec-color);
+  color: white;
+  border-radius: 4px;
+}
