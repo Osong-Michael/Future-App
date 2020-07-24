@@ -1,6 +1,7 @@
 .app-headers {
   text-align: center;
   margin-top: 30px;
+  color: var(--tet-color);
 }
 
 .sign-up-form {
@@ -61,7 +62,7 @@ hr {
 
 .content-table thead tr {
   background-color: var(--main-color);
-  color: #ffffff;
+  color: var(--tet-color);
   text-align: left;
   font-weight: bold;
 }
