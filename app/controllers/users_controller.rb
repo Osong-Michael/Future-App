@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
-  def homepage
-    
-  end
-
+  before_action :set_params, except: [:new, :create]
   def new
     @user = User.new
   end
@@ -11,16 +8,13 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save 
       session[:user_id] = @user.id 
-      flash[:success] = 'You account has been successfully created'
       redirect_to @user 
     else
-      flash.now[:alert] = 'Username already taken'
       render :new 
     end
   end
 
   def show 
-    @user = current_user
     user_all_cars = @user.cars
     @owned = user_all_cars.count{ |car| car.bought == true }
     @not_owned = user_all_cars.count{ |car| car.bought == false }
@@ -35,13 +29,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     @user.update(user_params)
-    flash[:success] = 'You account has been successfully updated'
     redirect_to @user
   end
 
@@ -49,6 +40,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :image, :image_cache )
+  end
+
+  def set_params
+    @user = current_user
   end
   
 end

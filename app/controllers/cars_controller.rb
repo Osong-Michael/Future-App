@@ -1,5 +1,7 @@
 class CarsController < ApplicationController
   before_action :require_user
+  before_action :set_car_params, only: [:show, :edit, :update]
+  before_action :block_btn, only: [:edit]
 
   def new
     @car = Car.new
@@ -17,15 +19,12 @@ class CarsController < ApplicationController
   end
 
   def show 
-    @car = Car.find(params[:id])
   end
 
   def edit 
-    @car = Car.find(params[:id])
   end
 
   def update
-    @car = Car.find(params[:id])
     @car.update(car_params)
     flash[:notice] = 'You have successfully updated your dream Car'
     redirect_to @car
@@ -45,5 +44,14 @@ class CarsController < ApplicationController
     params.require(:car).permit(:name, :image, :year, :model, :bought, :brand_id, :user_id, :car_id)
   end
   
+  def set_car_params
+    @car = Car.find(params[:id])
+  end
+
+  def block_btn
+    if current_user != @car.user
+      redirect_to user_path(current_user)
+    end 
+  end
 
 end

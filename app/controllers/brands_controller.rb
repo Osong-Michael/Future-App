@@ -1,5 +1,7 @@
 class BrandsController < ApplicationController
   before_action :require_user
+  before_action :set_brand_params, only: [:show, :edit, :update]
+  before_action :block_btn, only: [:edit]
   
   def index 
     @brands = Brand.all
@@ -22,16 +24,13 @@ class BrandsController < ApplicationController
   end
 
   def show
-    @brand = Brand.find(params[:id])
     @brand_cars = @brand.cars.includes(:user)
   end
 
   def edit
-    @brand = Brand.find(params[:id]) 
   end
 
   def update 
-    @brand = Brand.find(params[:id])
     @brand.update(brand_params)
     flash[:notice] = 'Updated Successfully'
     redirect_to @brand 
@@ -44,6 +43,14 @@ class BrandsController < ApplicationController
     params.require(:brand).permit(:brand_name, :image, :image_cache)
   end
   
+  def set_brand_params
+    @brand = Brand.find(params[:id])
+  end
   
+  def block_btn
+    if current_user != @brand.user
+      redirect_to brands_path
+    end 
+  end
   
 end
