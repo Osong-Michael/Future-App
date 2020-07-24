@@ -5,14 +5,6 @@
   </label>
   <label class="logo">Dreams</label>
   <ul>
-  <% if logged_in? %>
-    <li><%= link_to 'Wish List', user_path(current_user), class: "nav-links" %></li>
-    <li><%= link_to 'Pending Dreams', fly_path(current_user), class: 'nav-links top' %></li>
-    <li><%= link_to 'Achieved Dreams', owned_path(current_user), class: 'nav-links top' %></li>
-    <li><%= link_to 'All Brands', brands_path, class: 'nav-links top' %></li>
-    <li><strong class="user-name">(<%= current_user.username %>)</strong><%= link_to 'Sign Out', logout_path, method: :delete, class: 'nav-links' %></li>
-  <% else %>
-    <li><%= link_to 'Sign In', login_path, class: 'nav-links top' %></li>
-  <% end %>
+    <%= user_links %>
   </ul>
 </nav>

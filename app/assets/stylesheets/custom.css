@@ -19,6 +19,7 @@ nav{
   background: var(--main-color);
   height: 80px;
   width: 100%;
+
 }
 label.logo{
   color: white;
@@ -97,6 +98,13 @@ nav ul .nav-links, .nav-links2 {
   }
   #check:checked ~ ul{
     left: 0;
+  }
+
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-row-gap: 50px;
   }
 }
 /* section{

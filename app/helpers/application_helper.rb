@@ -7,4 +7,10 @@ module ApplicationHelper
       'Great Job Achieving this Dream'
     end
   end
+
+  def user_links
+    if logged_in?
+      render 'layouts/usernav'
+    end
+  end
 end

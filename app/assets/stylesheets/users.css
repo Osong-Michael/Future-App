@@ -91,9 +91,9 @@ hr {
 
 .user-btn {
   display: flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 15px;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px;
 }
 
 .add-brand {
