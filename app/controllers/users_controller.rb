@@ -20,7 +20,10 @@ class UsersController < ApplicationController
   end
 
   def show 
-    @user = User.find(params[:id])
+    @user = current_user
+    user_all_cars = @user.cars
+    @owned = user_all_cars.count{ |car| car.bought == true }
+    @not_owned = user_all_cars.count{ |car| car.bought == false }
     case params[:filter]
     when 'owned'
       @users_cars = @user.cars.owned_cars
@@ -29,7 +32,6 @@ class UsersController < ApplicationController
     else
       @users_cars= @user.cars
     end
-    
   end
 
   def edit

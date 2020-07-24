@@ -23,7 +23,7 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.find(params[:id])
-    @brand_cars = @brand.cars
+    @brand_cars = @brand.cars.includes(:user)
   end
 
   def edit

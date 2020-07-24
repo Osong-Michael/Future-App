@@ -4,9 +4,12 @@
   </div>
 </div>
 
-<h1 class="app-headers">
-  <%= @user.username %>
-</h1>
+<h1 class="app-headers">Your Dreams <%= @user.username %></h1>
+<p class="app-headers">
+  You have bought <%= pluralize(@owned, 'car') %> on your wish list and 
+  have <%= pluralize(@not_owned, 'car') %> left </br >
+  <strong><%= congrats(@owned, @not_owned) %></strong>
+</p>
 
 <table class="content-table">
   <thead>

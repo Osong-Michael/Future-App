@@ -13,4 +13,10 @@ module ApplicationHelper
       render 'layouts/usernav'
     end
   end
+
+  def congrats(owned, not_owned)
+    if not_owned == 0 && owned > 1
+      'Congratulations On Achieving all your dreams'
+    end
+  end
 end
