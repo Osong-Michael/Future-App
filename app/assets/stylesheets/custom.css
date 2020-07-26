@@ -138,4 +138,24 @@ nav ul .nav-links,
     grid-template-rows: 100px 100px 100px;
     grid-row-gap: 50px;
   }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edt-car-link {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .edt-car-link a {
+    color: antiquewhite;
+    background-color: var(--main-color);
+  }
+
+  .own-it {
+    background-color: var(--sec-color);
+    color: white;
+  }
 }
