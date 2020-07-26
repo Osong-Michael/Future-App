@@ -23,9 +23,9 @@
   height: 150px;
   object-fit: cover;
   display: block;
-  border-top: 2px solid #333333;
-  border-right: 2px solid #333333;
-  border-left: 2px solid #333333;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  border-left: 2px solid #333;
 }
 
 .card__content {
@@ -33,8 +33,8 @@
   font-size: 0.9em;
   padding: 15px;
   background: #fafafa;
-  border-right: 2px solid #333333;
-  border-left: 2px solid #333333;
+  border-right: 2px solid #333;
+  border-left: 2px solid #333;
 }
 
 .card__content > p:first-of-type {
@@ -50,12 +50,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #555555;
-  background: #eeeeee;
+  color: #555;
+  background: #eee;
   font-size: 0.8em;
-  border-bottom: 2px solid #333333;
-  border-right: 2px solid #333333;
-  border-left: 2px solid #333333;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+  border-left: 2px solid #333;
 }
 
 .card__info i {
