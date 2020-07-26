@@ -1,7 +1,7 @@
 # Ruby on Rails Capstone Project
-- In this project I built an MVP model of a Web Application where a user can create categories like Technology, Automobile etc and under those categories create projects or as the App name implies "dreams" which the user hopes to achieve in the future. For every dream the user achieves, he/she can scratch that off the pending list to the achieved list.
+- In this project I built an MVP model of a Web Application where a user can create categories like **Technology**, **Automobile** etc and under those categories create projects or as the App name implies "dreams" which the user hopes to achieve in the future. For every dream the user achieves, he/she can scratch that off the pending list to the achieved list.
 <br>
-For now, the MVP model is just for cars. A user can create a list of cars he will like to own, with the Car's details like name, model, year it was made and brand. Each time the user succeeds in buying one of the cars he can update his list and remove the car from pending to achieved, and if he does buy all the cars on his list he gets a message congratulating him on his "Grind" for achieving his dreams.
+For now, the MVP model is just for cars. A user can create a list of cars he will like to own, with the Car's details like name, model, year it was made and brand. The user can also add **Brands** to the app. Each time the user succeeds in buying one of the cars he can update his list and remove the car from pending to achieved, and if he does buy all the cars on his list he gets a message congratulating him on his "Grind" for achieving his dreams.
 
 
 ## Screenshots of App for various screen sizes
