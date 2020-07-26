@@ -2,6 +2,7 @@ class CarsController < ApplicationController
   before_action :require_user
   before_action :set_car_params, only: [:show, :edit, :update]
   before_action :block_btn, only: [:edit]
+  before_action :block_edit, only: [:edit]
 
   def new
     @car = Car.new
@@ -50,6 +51,12 @@ class CarsController < ApplicationController
 
   def block_btn
     if current_user != @car.user
+      redirect_to user_path(current_user)
+    end 
+  end
+
+  def block_edit
+    if @car.bought == true
       redirect_to user_path(current_user)
     end 
   end

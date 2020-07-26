@@ -1,0 +1,16 @@
+<div class="sign-up-form">
+  <%= form_for @brand do |f| %>
+    <%= f.label :brand_name %>
+    <%= f.text_field :brand_name, autofocus: true, class:'input-box' %>
+
+    <%= f.label :image %>
+    <%= f.file_field :image, class:'input-box' %>
+    <%= f.hidden_field :image_cache %>
+
+    <% if @brand.new_record? %>
+       <%= f.submit 'Add Brand', class: 'sign-up-btn' %>
+    <% else %>
+      <%= f.submit 'Update Brand', class: 'sign-up-btn' %>
+    <% end %>
+  <% end %>
+</div>

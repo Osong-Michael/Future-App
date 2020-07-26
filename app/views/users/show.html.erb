@@ -2,6 +2,13 @@
   <div class="add-brand">
     <%= link_to 'Add New Car to Collection', new_car_path %>
   </div>
+  <div class="add-brand">
+    <%= link_to 'Edit Account', edit_user_path(current_user) %>
+  </div>
+</div>
+
+<div class="user-btn">
+  
 </div>
 
 <h1 class="app-headers">Your Dreams <%= @user.username %></h1>

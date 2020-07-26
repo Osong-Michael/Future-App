@@ -19,9 +19,9 @@ class UsersController < ApplicationController
     @owned = user_all_cars.count{ |car| car.bought == true }
     @not_owned = user_all_cars.count{ |car| car.bought == false }
     case params[:filter]
-    when 'owned'
+    when 'achieved'
       @users_cars = @user.cars.owned_cars
-    when 'fly'
+    when 'pending'
       @users_cars = @user.cars.work_harder
     else
       @users_cars= @user.cars

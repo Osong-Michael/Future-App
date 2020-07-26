@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'users#new'
-  get 'users/:id/owned' => 'users#show', filter: 'owned', as: 'owned'
-  get 'users/:id/fly' => 'users#show', filter: 'fly', as: 'fly'
+  get 'users/:id/achieved' => 'users#show', filter: 'achieved', as: 'achieved'
+  get 'users/:id/pending' => 'users#show', filter: 'pending', as: 'pending'
   resources :users
   resources :brands
   resources :cars do 
