@@ -1,0 +1,31 @@
+<div class="user-btn">
+  <div class="add-brand">
+    <%= edit_brand_btn(@brand) %>
+  </div>
+</div>
+
+<h1 class="app-headers">
+  <%= image_tag(@brand.image.url, class: 'brand-pic' ) %>
+</h1>
+
+ 
+<div class="cards">
+  <% @brand_cars.each do |car| %>
+    <div class="card">
+      <%= link_to image_tag(car.image.url, class: 'card__image'), car_path(car) %>
+      <div class="card__content">
+        <p>
+          <strong><span><%= car.year %></span> <%= car.name %></strong>
+        </p>
+        <p>
+          <%= car.model %>
+        </p>
+      </div>
+      <div class="card__info">
+        <div>
+          <p>Is part of <strong><%= car.user.username %></strong>'s collection</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

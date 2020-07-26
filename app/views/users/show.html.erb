@@ -1,0 +1,41 @@
+<div class="user-btn">
+  <div class="add-brand">
+    <%= link_to 'Add New Car to Collection', new_car_path %>
+  </div>
+  <div class="add-brand">
+    <%= link_to 'Edit Account', edit_user_path(current_user) %>
+  </div>
+</div>
+
+<div class="user-btn">
+  
+</div>
+
+<h1 class="app-headers">Your Dreams <%= @user.username %></h1>
+<p class="app-headers">
+  You have bought <%= pluralize(@owned, 'car') %> on your wish list and 
+  have <%= pluralize(@not_owned, 'car') %> left </br >
+  <strong><%= congrats(@owned, @not_owned) %></strong>
+</p>
+
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Car Name</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <% @users_cars.each do |car| %>
+    <tbody>
+      <tr>
+        <td><%= link_to car.name, car_path(car) %></td>
+        <td><%= car.model.upcase %></td>
+        <td><%= car.year %></td>
+        <td><strong><%= status(car) %></strong></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+
