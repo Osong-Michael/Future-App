@@ -1,6 +1,5 @@
 module ApplicationHelper
-
-  def status(car) 
+  def status(car)
     if car.bought == false
       'Grind harder'
     else
@@ -9,14 +8,10 @@ module ApplicationHelper
   end
 
   def user_links
-    if logged_in?
-      render 'layouts/usernav'
-    end
+    render 'layouts/usernav' if logged_in?
   end
 
   def congrats(owned, not_owned)
-    if not_owned == 0 && owned > 1
-      'Congratulations On Achieving all your dreams'
-    end
+    'Congratulations On Achieving all your dreams' if not_owned.zero? && owned >= 1
   end
 end

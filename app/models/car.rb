@@ -5,7 +5,7 @@ class Car < ApplicationRecord
   validates :name, :model, :year, presence: true
   validates :image, presence: true
 
-  scope :owned_cars, -> { where(:bought => true)}
-  scope :work_harder, -> { where(:bought => false)}
+  scope :owned_cars, -> { where(bought: true) }
+  scope :work_harder, -> { where(bought: false) }
   # Ex:- scope :active, -> {where(:active => true)}
 end

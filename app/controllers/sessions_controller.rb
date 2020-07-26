@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  before_action :already_logged_in, only: [:new, :create]
-  
+  before_action :already_logged_in, only: %i[new create]
+
   def new; end
 
   def create
@@ -20,12 +20,12 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 
-  private 
+  private
 
   def already_logged_in
-    if logged_in?
+    if logged_in? # rubocop:disable Style/GuardClause
       flash[:error] = 'Your are already logged in'
-      redirect_to root_path 
+      redirect_to root_path
     end
   end
 end
