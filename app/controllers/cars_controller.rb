@@ -9,7 +9,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    @car = Car.new(car_params)
+    @car = current_user.cars.new(car_params)
     if @car.save
       flash[:notice] = 'You have successfully added a new car to your collection'
       redirect_to user_path(current_user)
