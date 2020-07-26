@@ -58,8 +58,22 @@ nav ul .nav-links, .nav-links2 {
   cursor: pointer;
   display: none;
 }
+.flash {
+  color: var(--sec-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: #ffc 0 0 4px;
+}
 #check{
   display: none;
+}
+#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--sec-color);
 }
 @media (max-width: 952px){
   label.logo{

@@ -1,5 +1,6 @@
 <div class="sign-up-form">
   <%= form_for @car do |f| %>
+    <%= render 'shared/errors', object: @car %>
     <%= f.label :name %>
     <%= f.text_field :name, autofocus: true, class:'input-box' %>
 

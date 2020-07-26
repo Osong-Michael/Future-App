@@ -5,8 +5,8 @@ RSpec.describe UsersController, type: :controller do
     params = {
       user: { username: 'John' }
     }
-    should permit(:username).
-      for(:create, params: params).
-      on(:user)
+    should permit(:username)
+      .for(:create, params: params)
+      .on(:user)
   end
 end
