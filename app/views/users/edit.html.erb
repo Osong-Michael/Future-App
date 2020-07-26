@@ -1,6 +1,7 @@
 <div class="sign-up-form">
   <h1>Edit Account</h1>
   <%= form_for @user do |f| %>
+    <%= render 'shared/errors', object: @user %>
     <%= f.label :username %>
     <%= f.text_field :username, placeholder: 'Enter your username..', autofocus: true, class:'input-box' %>
 

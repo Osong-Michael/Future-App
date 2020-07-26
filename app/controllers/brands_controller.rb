@@ -17,7 +17,6 @@ class BrandsController < ApplicationController
       flash[:notice] = 'You successfully added another brand'
       redirect_to @brand
     else
-      flash.now[:notice] = 'Brand already exists'
       render :new
     end
   end

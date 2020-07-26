@@ -14,7 +14,6 @@ class CarsController < ApplicationController
       flash[:notice] = 'You have successfully added a new car to your collection'
       redirect_to user_path(current_user)
     else
-      flash.now[:notice] = 'Something went wrong'
       render :new
     end
   end

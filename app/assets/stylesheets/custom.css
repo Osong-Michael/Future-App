@@ -4,52 +4,58 @@
   --tet-color: #434b54;
 }
 
-
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: 'Roboto Condensed', sans-serif;
 }
-nav{
+
+nav {
   background: var(--main-color);
   height: 80px;
   width: 100%;
-
 }
-label.logo{
+
+label.logo {
   color: white;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
   font-weight: bold;
 }
-nav ul{
+
+nav ul {
   float: right;
   margin-right: 20px;
 }
-nav ul li{
+
+nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul .nav-links, .nav-links2 {
+
+nav ul .nav-links,
+.nav-links2 {
   color: white;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
 }
 
-
-.nav-links.active,.nav-links:hover{
+.nav-links.active,
+.nav-links:hover {
   background: #1b9bff;
-  transition: .5s;
+  transition: 0.5s;
 }
-.checkbtn{
+
+.checkbtn {
   font-size: 30px;
   color: white;
   float: right;
@@ -58,45 +64,71 @@ nav ul .nav-links, .nav-links2 {
   cursor: pointer;
   display: none;
 }
-#check{
+
+.flash {
+  color: var(--sec-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: #ffc 0 0 4px;
+}
+
+#check {
   display: none;
 }
-@media (max-width: 952px){
-  label.logo{
+
+#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: var(--sec-color);
+}
+
+@media (max-width: 952px) {
+  label.logo {
     font-size: 30px;
     padding-left: 50px;
   }
-  nav ul li a{
+
+  nav ul li a {
     font-size: 16px;
   }
 }
-@media (max-width: 858px){
-  .checkbtn{
+
+@media (max-width: 858px) {
+  .checkbtn {
     display: block;
   }
-  ul{
+
+  ul {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #2c3e50;
+    background: #8b8c8d;
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
   }
-  nav ul li{
+
+  nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px;
   }
-  nav ul li a{
+
+  nav ul li a {
     font-size: 20px;
   }
-  a:hover,a.active{
+
+  a:hover,
+  a.active {
     background: none;
     color: #0082e6;
   }
-  #check:checked ~ ul{
+
+  #check:checked ~ ul {
     left: 0;
   }
 
@@ -107,8 +139,3 @@ nav ul .nav-links, .nav-links2 {
     grid-row-gap: 50px;
   }
 }
-/* section{
-  background: url(bg1.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 80px);
-} */
