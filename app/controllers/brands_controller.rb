@@ -12,7 +12,7 @@ class BrandsController < ApplicationController
   end
 
   def create
-    @brand = current_user.brands.new(brand_params)
+    @brand = current_user.brands.build(brand_params)
     if @brand.save
       flash[:notice] = 'You successfully added another brand'
       redirect_to @brand

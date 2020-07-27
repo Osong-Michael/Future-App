@@ -6,4 +6,5 @@ module CarsHelper
   def edit_btn(car)
     link_to 'Edit Car Details', edit_car_path(car) if car.bought == false && current_user == car.user
   end
+
 end
