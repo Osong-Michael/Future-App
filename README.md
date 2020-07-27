@@ -51,7 +51,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Video Link
 
-[Video Explanation Link]()
+[Video Explanation Link](https://youtu.be/x1rPIq1cYTc)
 
 
 ## Author
