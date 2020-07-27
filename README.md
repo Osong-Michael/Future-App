@@ -43,6 +43,7 @@ To get a local copy up and running follow these simple example steps.
 - Run ` rails server ` or ` rails s ` on your terminal to start the integrated ruby server.
 - Open your web browser and go to ` localhost:3000 `, to see that the rails sever is up and running.
 - Enjoy the app.
+- Type `rspec` to run tests for the app while in the app directory
 
 ## Live Demo Link
 

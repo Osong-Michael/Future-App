@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_params, except: %i[new create]
+  before_action :user_owner_cars, :user_not_owner_cars, only: [:show]
   def new
     @user = User.new
   end
@@ -15,9 +16,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    user_all_cars = @user.cars
-    @owned = user_all_cars.count { |car| car.bought == true }
-    @not_owned = user_all_cars.count { |car| car.bought == false }
     @users_cars = case params[:filter]
                   when 'achieved'
                     @user.cars.owned_cars
@@ -43,5 +41,15 @@ class UsersController < ApplicationController
 
   def set_params
     @user = current_user
+  end
+  
+  def user_owner_cars
+    user_all_cars = @user.cars
+    @owned = user_all_cars.count { |car| car.bought == true }
+  end
+
+  def user_not_owner_cars
+    user_all_cars = @user.cars
+    @not_owned = user_all_cars.count { |car| car.bought == false }
   end
 end

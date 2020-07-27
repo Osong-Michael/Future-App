@@ -107,7 +107,7 @@ hr {
 .add-brand a {
   color: #fff;
   padding: 10px;
-  background-color: var(--main-color);
+  background-color: var(--sec-color);
   border-radius: 5px;
 }
 

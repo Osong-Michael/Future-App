@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    !!current_user # rubocop:disable Style/DoubleNegation
+    current_user.present?
   end
 
   def require_user
