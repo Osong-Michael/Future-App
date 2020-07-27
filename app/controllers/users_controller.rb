@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def set_params
     @user = current_user
   end
-  
+
   def user_owner_cars
     user_all_cars = @user.cars
     @owned = user_all_cars.count { |car| car.bought == true }
