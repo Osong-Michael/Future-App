@@ -24,6 +24,10 @@ For now, the MVP model is just for cars. A user can create a list of cars he wil
 * CSSS
 
 
+## Prerequisite
+- Ruby 2.6 or greater
+- Ruby on Rails 5.2.3 or greater
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
