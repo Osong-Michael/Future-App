@@ -1,3 +1,23 @@
 <h1 class="app-headers">Edit your Car Details</h1>
 
-<%= render 'form' %>
+<div class="sign-up-form">
+  <%= form_for @car do |f| %>
+    <%= render 'shared/errors', object: @car %>
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class:'input-box' %>
+
+    <%= f.label :model %>
+    <%= f.text_field :model, class:'input-box' %>
+
+    <%= f.label :year %>
+    <%= f.text_field :year, class:'input-box' %>
+
+    <%= f.label :image %>
+    <%= f.file_field :image, class:'input-box' %>
+
+    <%= f.label :brand %>
+    <%= f.collection_select(:brand_id,  Brand.all, :id, :brand_name, { :prompt => 'Select a Brand for your car' }, { class:'input-box'} ) %>
+    
+    <%= f.submit 'Update Car', class: 'sign-up-btn' %>
+  <% end %>
+</div>
