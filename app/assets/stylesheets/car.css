@@ -1,0 +1,53 @@
+.car-container {
+  box-sizing: border-box;
+  width: 70%;
+  margin: 30px auto;
+  padding: 10px;
+  color: var(--tet-color);
+}
+
+.car-img {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.car-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.car-details {
+  margin-right: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.edt-car-link {
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+
+.edt-car-link a {
+  padding: 5px;
+  border-radius: 4px;
+  color: antiquewhite;
+  background-color: var(--main-color);
+}
+
+.own-it {
+  padding: 4px;
+  background-color: var(--sec-color);
+  color: white;
+  border-radius: 4px;
+}

@@ -1,0 +1,14 @@
+<div class="user-btn">
+  <div class="add-brand">
+    <%= link_to 'Add New Brand', new_brand_path %>
+  </div>
+</div>
+<h1 class="app-headers">All Brands</h1>
+
+<div class="brand-grid">
+  <% @brands.each do |brand| %>
+    <div class="grid">
+      <p><%= link_to image_tag(brand.image.url, class: 'brand-pic'), brand_path(brand) %></p>
+    </div>
+  <% end %>
+</div>

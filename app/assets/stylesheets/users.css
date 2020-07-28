@@ -1,0 +1,120 @@
+.app-headers {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--tet-color);
+}
+
+.sign-up-form {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 3% auto 30px;
+  text-align: center;
+}
+
+.sign-up-form h1 {
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+.input-box {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.or {
+  margin: -19px auto 30px;
+  background-color: #fff;
+  width: 30px;
+}
+
+.sign-up-btn,
+.log-in-btn {
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 10px 0 20px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+hr {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 0.9em;
+  width: 80%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: var(--main-color);
+  color: var(--tet-color);
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1c8adb;
+}
+
+.user-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px;
+}
+
+.add-brand {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.add-brand a {
+  color: #fff;
+  padding: 10px;
+  background-color: var(--sec-color);
+  border-radius: 5px;
+}
+
+.user-name {
+  color: #fff;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}

@@ -1,0 +1,15 @@
+<h1 class="app-headers">Add a New Brand</h1>
+
+<div class="sign-up-form">
+  <%= form_for @brand do |f| %>
+    <%= render 'shared/errors', object: @brand %>
+    <%= f.label :brand_name %>
+    <%= f.text_field :brand_name, autofocus: true, class:'input-box' %>
+
+    <%= f.label :image %>
+    <%= f.file_field :image, class:'input-box' %>
+    <%= f.hidden_field :image_cache %>
+
+    <%= f.submit 'Add Brand', class: 'sign-up-btn' %>
+  <% end %>
+</div>
